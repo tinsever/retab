@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Tab Renamer",
+    "version": "1.0",
+    "description": "Right click a tab to rename it",
+    "permissions": [
+      "tabs",
+      "menus",
+      "<all_urls>",
+      "theme"
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "browser_action": {
+      "default_popup": "popup.html"
+    }
+  }
