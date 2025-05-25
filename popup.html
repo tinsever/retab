@@ -9,7 +9,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
-    input {
+    input[type="text"] { 
       width: 100%;
       padding: 8px;
       margin-bottom: 12px;
@@ -18,10 +18,21 @@
       box-sizing: border-box;
     }
 
-    input:focus {
+    input[type="text"]:focus {
       border-color: var(--focus-color, #0060df);
       outline: none;
       box-shadow: 0 0 0 2px var(--focus-shadow, rgba(0, 96, 223, 0.3));
+    }
+
+    .persistent-container { 
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 13px;
+    }
+
+    .persistent-container input[type="checkbox"] {
+      margin-right: 8px;
     }
 
     button {
@@ -39,7 +50,13 @@
   </style>
 </head>
 <body>
-  <input type="text" id="titleInput" placeholder="Enter new tab name">
+  <input type="text" id="titleInput" placeholder="New tab name">
+  
+  <div class="persistent-container">
+    <input type="checkbox" id="persistentCheckbox">
+    <label for="persistentCheckbox">Permanent</label>
+  </div>
+  
   <button id="saveButton">Rename</button>
   <script src="popup.js"></script>
 </body>

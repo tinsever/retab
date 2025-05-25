@@ -1,32 +1,49 @@
 {
-    "manifest_version": 2,
-    "name": "Retab",
-    "version": "1.0",
-    "description": "Right click a tab to rename it",
-    "permissions": [
-      "tabs",
-      "menus",
-      "<all_urls>",
-      "theme"
-    ],
-    "background": {
-      "scripts": ["background.js"]
-    },
-    "browser_action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icons/retab-16.png",
-        "32": "icons/retab-32.png",
-        "48": "icons/retab-48.png",
-        "96": "icons/retab-96.png",
-        "128": "icons/retab-128.png"
-      }
-    },
-    "icons": {
+  "manifest_version": 3,
+  "name": "Retab",
+  "version": "1.1",
+  "description": "Right click a tab to rename it",
+  "permissions": [
+    "tabs",
+    "menus",
+    "theme",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
       "16": "icons/retab-16.png",
       "32": "icons/retab-32.png",
       "48": "icons/retab-48.png",
       "96": "icons/retab-96.png",
       "128": "icons/retab-128.png"
     }
-  }
+  },
+  "icons": {
+    "16": "icons/retab-16.png",
+    "32": "icons/retab-32.png",
+    "48": "icons/retab-48.png",
+    "96": "icons/retab-96.png",
+    "128": "icons/retab-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
