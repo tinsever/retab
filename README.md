@@ -1,6 +1,7 @@
 # Retab
 
 A Firefox extension that allows you to rename tabs via the right-click menu.
+Get it here: [addons.mozilla.org/de/firefox/addon/re-tab/](https://addons.mozilla.org/de/firefox/addon/re-tab/)
 
 ## Features
 - Right-click any tab to rename it
